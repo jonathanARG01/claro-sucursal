@@ -122,6 +122,9 @@
     max-height: 600px;
     overflow-y: scroll;
 }
+.box-plan-full {
+    max-height: inherit !important;
+}
 
 .box-plan::-webkit-scrollbar {
     width: 6px;
