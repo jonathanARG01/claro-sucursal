@@ -119,8 +119,8 @@
 
 
 .box-plan {
-    max-height: 400px;
-    overflow-y: auto;
+    max-height: 600px;
+    overflow-y: scroll;
 }
 
 .box-plan::-webkit-scrollbar {
@@ -381,6 +381,11 @@
     align-items: center;
     background-color: #FC1E14;
     transition-duration: .3s;
+}
+.sucursal .btn-paid {
+    background-color: #DBDBDB;
+    border: 2px solid #DBDBDB;
+    pointer-events: none;
 }
 
 .sucursal .btn-pay:hover {
