@@ -120,40 +120,69 @@
 
 .box-plan {
     max-height: 600px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .box-plan-full {
     max-height: inherit !important;
 }
 
+
+
+
 .box-plan::-webkit-scrollbar {
     width: 6px;
     height: 20px;
+    border-radius: 10px;
 }
 
 .box-plan::-webkit-scrollbar-thumb {
     background-color: #a3a3a3;
     border-radius: 5px;
+    border-radius: 10px;
 }
 
 .box-plan::-webkit-scrollbar-thumb:hover {
     background-color: #d9d9d9;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .box-plan::-webkit-scrollbar-thumb:active {
     background-color: #4e4e4e;
+    border-radius: 10px;
 }
 
 .box-plan::-webkit-scrollbar-track {
     width: 4px;
     background-color: #b8bbbb;
+    border-radius: 10px;
 }
 
 .box-plan::-webkit-scrollbar-track:hover,
 .box-plan::-webkit-scrollbar-track:active {
     background: #ccc;
+    border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+.link-screen {
+    cursor: pointer;
+}
+.hide {
+    display: none !important;
+}
+.visible {
+    display: block !important;
+}
+
+
 
 
 
@@ -284,6 +313,8 @@
     font-size: 12px;
     font-weight: 400;
     background-color: #f6f6f6;
+    width: 100%;
+    height: 40px;
 }
 
 .sucursal .alert {
@@ -482,10 +513,9 @@
 
 
 
-
 .box-banner {
     position: relative;
-    min-height: 320px;
+    min-height: 270px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -621,7 +651,10 @@
     border: none;
     box-shadow: inherit;
     padding: 10px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
 }
+
 
 .sucursal .accordion > .accordion-item:nth-child(odd) .accordion-header,
 .sucursal .accordion > .accordion-item:nth-child(odd) button,
@@ -629,34 +662,55 @@
     background-color: rgba(203, 210, 224, 0.2);
 }
 
-.sucursal .accordion > .accordion-item:nth-child(even) .accordion-header,
-.sucursal .accordion > .accordion-item:nth-child(even) button,
-.sucursal .accordion > .accordion-item:nth-child(even) .accordion-collapse {
+.sucursal .card:nth-child(even) .accordion-header h2,
+.sucursal .card:nth-child(even) button,
+.sucursal .card:nth-child(even) .accordion-collapse {
     background-color: rgba(203, 210, 224, 0.4);
+    width: 100%;
 }
 
+.ms3 {
+    margin-left: 10px;
+}
+.ms4 {
+    margin-left: 20px;
+}
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
-
-.sucursal .accordion-button .nombre-dispositivo {
+.sucursal .nombre-dispositivo {
     color: #1C1C1C;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
 }
 
-.sucursal .accordion-button .estado {
+.sucursal .estado {
     color: #1C1C1C;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: left;
 }
 
 
 
-.sucursal .accordion-button .box-icons {
+.sucursal .box-icons {
     width: 40px;
+    margin-right: 10px;
 }
 
+h2 {
+    text-decoration: none;
+}
 
 .sucursal .accordion-button p {
     font-weight: 600;
     font-size: 14px;
     margin: 0;
+    text-align: left;
 }
 
 
@@ -681,16 +735,21 @@
     font-weight: 400;
 }
 
-
 .sucursal .accordion-in .accordion-item,
 .sucursal .accordion-in .accordion-collapse {
     border-radius: 0;
 }
 
 .sucursal .accordion-button-main {
-    background-color: #fff !important;
+    width: 100%;
+    background-color: rgba(203, 210, 224, 0.2);
+    text-decoration: none;
 }
 
+.sucursal .accordion>.card .card-header {
+    padding: 0;
+    border-radius: 10px;
+}
 
 
 
@@ -732,14 +791,28 @@
     margin-top: 4px;
 }
 
-.sucursal .container-dispositivos .item .form-check-input:checked {
+.sucursal .custom-control-input:checked~.custom-control-label::before {
     background-color: #34C85A;
     border-color: #34C85A;
 }
 
+.sucursal .custom-control label {
+    font-size: 10px;
+}
 
+.sucursal .custom-control label span {
+    width: 50px;
+    display: block;
+    padding-top: 4px;
+}
 
+#acordeonMain * {
+    text-decoration: none;
+}
 
+#cancelar_cambio {
+    margin-top: 10px !important;
+}
 
 .sucursal .box-reiniciar {
 
@@ -850,7 +923,21 @@
 }
 
 
+.mt4 {
+    margin-top: 20px;
+}
 
+.ms-2 {
+    margin-left: 10px !important;
+}
+
+.mt5 {
+    margin-top: 20px !important;
+}
+
+.ms-5 {
+    margin-left: 20px !important;
+}
 
 .custom-tooltip {
     --bs-tooltip-bg: #FC1E14 !important;
@@ -864,7 +951,42 @@
 }
 
 
+#acordeonMain .card-body {
+    background-color: rgba(203, 210, 224, 0.2);
+}
 
+
+.sucursal .mac,
+.sucursal .conntype {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sucursal .mac span,
+.sucursal .conntype span {
+    font-weight: 400;
+}
+
+
+
+#screen_6 .card-header h2 button {
+    background-color: #fff;
+}
+
+#screen_6 .card {
+    border-radius: 10px;
+}
+
+#screen_6 .card p {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+#screen_6 .ms-3 {
+    margin-left: 10px !important;
+}
 
 
 @media (max-width: 1200px) {
@@ -926,6 +1048,28 @@
     .box-plan {
         max-height: 320px;
     }
+
+}
+
+@media (max-width: 768px) {
+
+    .box-banner {
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .box-banner {
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .me-3 {
+        margin-right: 20px !important;
+    }    
 
 }
 
