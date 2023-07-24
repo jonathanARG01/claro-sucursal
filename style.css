@@ -19,8 +19,6 @@
 
 
 
-
-
 .navbar-user {
     height: 40px;
     background-color: #5B6D79 !important;
@@ -1073,3 +1071,24 @@ h2 {
 
 }
 
+
+
+/* Estilo para el tooltip */
+.tooltip .tooltip-inner {
+    background-color: #FC1E14 !important;
+}
+
+/* Estilo para la flecha del tooltip */
+.tooltip .arrow::after {
+    border-top-color: #FC1E14 !important;
+}
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-top-color: #FC1E14 !important;
+    border-bottom-color: #FC1E14 !important;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+    border-top-color: #FC1E14 !important;
+    border-bottom-color: #FC1E14 !important;
+}
